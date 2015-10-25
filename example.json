@@ -1,0 +1,24 @@
+{
+  "zookeeper": {
+    "base": "/services/web",
+    "connectString": "localhost:2181",
+    "connectTimeout": 1,
+    "sessionTimeout": 10,
+    "zkData": "{\"%%ip_addr%%\": \"8080\"}"
+  },
+/*  "target": {
+    "name": "ProcessCheck",
+    "params": {
+      "processPidFile": "/var/run/someprocess.pid"
+    }
+  },*/
+  "target": {
+    "name": "HttpCheck",
+    "params": {
+      "target": "localhost:8000/",
+      "responseCode": 200,
+      "requestTimeout": 5
+    }
+  },
+  "interval": 10
+}
