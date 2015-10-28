@@ -41,12 +41,13 @@ java -jar target/scala-2.11/serviceDiscoveryAgent-assembly-1.0.jar -config examp
 Configuration
 --------
 
-By default agent looks for config at `/etc/serviceDiscovery/serviceDiscovery.json`, but this behaviour could be override by option `-config`. It works with json format and _not_ automatically re-read by agent on the change. So you have to restart it manually every each change.
+By default agent looks for config at `/etc/serviceDiscovery/serviceDiscovery.json`, but this behaviour could be override by option `-config`. It works with json format and _not_ automatically re-read by agent on the change. So you have to restart it manually every each change.   
+    
 | Name | Value(s) | Description |
 | -----|:--------:| -----------:|
 | zookeeper/Base | "/services/web" | path to zookeeper base |
 | zookeeper/zkData | "{\"127.0.0.1\": \"80\"}" | value to put into new node |
-| target/ProcessCheck/processPidFile |  "/tmp/123.pid" | path to process pid file (ProcessCheck only)
+| target/ProcessCheck/processPidFile |  "/tmp/123.pid" | path to process pid file (ProcessCheck only) |
 | target/checkName | "ProcessCheck|HttpCheck" | name of checker |
 | target/target | localhost:80/health" | http endpoint (HttpCheck only) |
 | target/responseCode |  200 | Success HTTP response code (HttpCheck only) |
